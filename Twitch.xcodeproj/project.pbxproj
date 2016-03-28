@@ -7,12 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C5C66A21CA54A1700E4F168 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5C669B1CA54A1700E4F168 /* Alamofire.framework */; };
+		8C5C66A31CA54A1700E4F168 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5C669B1CA54A1700E4F168 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C5C66A41CA54A1700E4F168 /* MDPSplitView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5C669C1CA54A1700E4F168 /* MDPSplitView.framework */; };
+		8C5C66A51CA54A1700E4F168 /* MDPSplitView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5C669C1CA54A1700E4F168 /* MDPSplitView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C5C66A61CA54A1700E4F168 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5C669D1CA54A1700E4F168 /* Moya.framework */; };
+		8C5C66A71CA54A1700E4F168 /* Moya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5C669D1CA54A1700E4F168 /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C5C66A81CA54A1700E4F168 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5C669E1CA54A1700E4F168 /* ReactiveCocoa.framework */; };
+		8C5C66A91CA54A1700E4F168 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5C669E1CA54A1700E4F168 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C5C66AA1CA54A1700E4F168 /* ReactiveMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5C669F1CA54A1700E4F168 /* ReactiveMoya.framework */; };
+		8C5C66AB1CA54A1700E4F168 /* ReactiveMoya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5C669F1CA54A1700E4F168 /* ReactiveMoya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C5C66AC1CA54A1700E4F168 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5C66A01CA54A1700E4F168 /* Result.framework */; };
+		8C5C66AD1CA54A1700E4F168 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5C66A01CA54A1700E4F168 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C5C66AE1CA54A1700E4F168 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5C66A11CA54A1700E4F168 /* SwiftyJSON.framework */; };
+		8C5C66AF1CA54A1700E4F168 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5C66A11CA54A1700E4F168 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C5C66B71CA54A3100E4F168 /* Alamofire.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C5C66B01CA54A3100E4F168 /* Alamofire.framework.dSYM */; };
+		8C5C66B81CA54A3100E4F168 /* MDPSplitView.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C5C66B11CA54A3100E4F168 /* MDPSplitView.framework.dSYM */; };
+		8C5C66B91CA54A3100E4F168 /* Moya.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C5C66B21CA54A3100E4F168 /* Moya.framework.dSYM */; };
+		8C5C66BA1CA54A3100E4F168 /* ReactiveCocoa.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C5C66B31CA54A3100E4F168 /* ReactiveCocoa.framework.dSYM */; };
+		8C5C66BB1CA54A3100E4F168 /* ReactiveMoya.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C5C66B41CA54A3100E4F168 /* ReactiveMoya.framework.dSYM */; };
+		8C5C66BC1CA54A3100E4F168 /* Result.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C5C66B51CA54A3100E4F168 /* Result.framework.dSYM */; };
+		8C5C66BD1CA54A3100E4F168 /* SwiftyJSON.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C5C66B61CA54A3100E4F168 /* SwiftyJSON.framework.dSYM */; };
+		8C5C66C41CA682AE00E4F168 /* JWToolbarAdaptiveSpaceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C66C31CA682AE00E4F168 /* JWToolbarAdaptiveSpaceItem.m */; };
+		8C66C7191C9BF1E9001BEA30 /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C66C7171C9BF1E9001BEA30 /* MenuBarController.swift */; };
+		8C66C71C1C9C4B37001BEA30 /* TwitchWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C66C71B1C9C4B37001BEA30 /* TwitchWindowController.swift */; };
+		8CD829081CA098B800124CCE /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD829071CA098B800124CCE /* Network.swift */; };
 		8CE0BEFD1C9B445500834179 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0BEFC1C9B445500834179 /* AppDelegate.swift */; };
 		8CE0BEFF1C9B445500834179 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0BEFE1C9B445500834179 /* ViewController.swift */; };
 		8CE0BF011C9B445500834179 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CE0BF001C9B445500834179 /* Assets.xcassets */; };
 		8CE0BF041C9B445500834179 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CE0BF021C9B445500834179 /* Main.storyboard */; };
 		8CE0BF0F1C9B445500834179 /* TwitchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0BF0E1C9B445500834179 /* TwitchTests.swift */; };
 		8CE0BF1A1C9B445500834179 /* TwitchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0BF191C9B445500834179 /* TwitchUITests.swift */; };
+		8CE0BF771C9B59AD00834179 /* TwitchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0BF761C9B59AD00834179 /* TwitchAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +58,62 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8CE0BF461C9B4A8900834179 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8C5C66A51CA54A1700E4F168 /* MDPSplitView.framework in Embed Frameworks */,
+				8C5C66AB1CA54A1700E4F168 /* ReactiveMoya.framework in Embed Frameworks */,
+				8C5C66A71CA54A1700E4F168 /* Moya.framework in Embed Frameworks */,
+				8C5C66AD1CA54A1700E4F168 /* Result.framework in Embed Frameworks */,
+				8C5C66AF1CA54A1700E4F168 /* SwiftyJSON.framework in Embed Frameworks */,
+				8C5C66A31CA54A1700E4F168 /* Alamofire.framework in Embed Frameworks */,
+				8C5C66A91CA54A1700E4F168 /* ReactiveCocoa.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CE0BF471C9B4AD000834179 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				8C5C66B71CA54A3100E4F168 /* Alamofire.framework.dSYM in CopyFiles */,
+				8C5C66B81CA54A3100E4F168 /* MDPSplitView.framework.dSYM in CopyFiles */,
+				8C5C66B91CA54A3100E4F168 /* Moya.framework.dSYM in CopyFiles */,
+				8C5C66BA1CA54A3100E4F168 /* ReactiveCocoa.framework.dSYM in CopyFiles */,
+				8C5C66BB1CA54A3100E4F168 /* ReactiveMoya.framework.dSYM in CopyFiles */,
+				8C5C66BC1CA54A3100E4F168 /* Result.framework.dSYM in CopyFiles */,
+				8C5C66BD1CA54A3100E4F168 /* SwiftyJSON.framework.dSYM in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		8C5C669B1CA54A1700E4F168 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
+		8C5C669C1CA54A1700E4F168 /* MDPSplitView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MDPSplitView.framework; path = Carthage/Build/Mac/MDPSplitView.framework; sourceTree = "<group>"; };
+		8C5C669D1CA54A1700E4F168 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/Mac/Moya.framework; sourceTree = "<group>"; };
+		8C5C669E1CA54A1700E4F168 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/Mac/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		8C5C669F1CA54A1700E4F168 /* ReactiveMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveMoya.framework; path = Carthage/Build/Mac/ReactiveMoya.framework; sourceTree = "<group>"; };
+		8C5C66A01CA54A1700E4F168 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/Mac/Result.framework; sourceTree = "<group>"; };
+		8C5C66A11CA54A1700E4F168 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/Mac/SwiftyJSON.framework; sourceTree = "<group>"; };
+		8C5C66B01CA54A3100E4F168 /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Carthage/Build/Mac/Alamofire.framework.dSYM; sourceTree = "<group>"; };
+		8C5C66B11CA54A3100E4F168 /* MDPSplitView.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = MDPSplitView.framework.dSYM; path = Carthage/Build/Mac/MDPSplitView.framework.dSYM; sourceTree = "<group>"; };
+		8C5C66B21CA54A3100E4F168 /* Moya.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Moya.framework.dSYM; path = Carthage/Build/Mac/Moya.framework.dSYM; sourceTree = "<group>"; };
+		8C5C66B31CA54A3100E4F168 /* ReactiveCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ReactiveCocoa.framework.dSYM; path = Carthage/Build/Mac/ReactiveCocoa.framework.dSYM; sourceTree = "<group>"; };
+		8C5C66B41CA54A3100E4F168 /* ReactiveMoya.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ReactiveMoya.framework.dSYM; path = Carthage/Build/Mac/ReactiveMoya.framework.dSYM; sourceTree = "<group>"; };
+		8C5C66B51CA54A3100E4F168 /* Result.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Result.framework.dSYM; path = Carthage/Build/Mac/Result.framework.dSYM; sourceTree = "<group>"; };
+		8C5C66B61CA54A3100E4F168 /* SwiftyJSON.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SwiftyJSON.framework.dSYM; path = Carthage/Build/Mac/SwiftyJSON.framework.dSYM; sourceTree = "<group>"; };
+		8C5C66C21CA682A200E4F168 /* JWToolbarAdaptiveSpaceItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWToolbarAdaptiveSpaceItem.h; sourceTree = "<group>"; };
+		8C5C66C31CA682AE00E4F168 /* JWToolbarAdaptiveSpaceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWToolbarAdaptiveSpaceItem.m; sourceTree = "<group>"; };
+		8C66C7171C9BF1E9001BEA30 /* MenuBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
+		8C66C71B1C9C4B37001BEA30 /* TwitchWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitchWindowController.swift; sourceTree = "<group>"; };
+		8CD829071CA098B800124CCE /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		8CE0BEF91C9B445500834179 /* Twitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CE0BEFC1C9B445500834179 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CE0BEFE1C9B445500834179 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +126,8 @@
 		8CE0BF151C9B445500834179 /* TwitchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CE0BF191C9B445500834179 /* TwitchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchUITests.swift; sourceTree = "<group>"; };
 		8CE0BF1B1C9B445500834179 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CE0BF521C9B51A100834179 /* Twitch-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Twitch-Bridging-Header.h"; sourceTree = "<group>"; };
+		8CE0BF761C9B59AD00834179 /* TwitchAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitchAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +135,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C5C66A41CA54A1700E4F168 /* MDPSplitView.framework in Frameworks */,
+				8C5C66AA1CA54A1700E4F168 /* ReactiveMoya.framework in Frameworks */,
+				8C5C66A61CA54A1700E4F168 /* Moya.framework in Frameworks */,
+				8C5C66AC1CA54A1700E4F168 /* Result.framework in Frameworks */,
+				8C5C66AE1CA54A1700E4F168 /* SwiftyJSON.framework in Frameworks */,
+				8C5C66A21CA54A1700E4F168 /* Alamofire.framework in Frameworks */,
+				8C5C66A81CA54A1700E4F168 /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,13 +162,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C5C66C11CA6828700E4F168 /* JWToolbarAdaptiveSpaceItem */ = {
+			isa = PBXGroup;
+			children = (
+				8C5C66C21CA682A200E4F168 /* JWToolbarAdaptiveSpaceItem.h */,
+				8C5C66C31CA682AE00E4F168 /* JWToolbarAdaptiveSpaceItem.m */,
+			);
+			name = JWToolbarAdaptiveSpaceItem;
+			sourceTree = "<group>";
+		};
 		8CE0BEF01C9B445500834179 = {
 			isa = PBXGroup;
 			children = (
+				8C5C66C11CA6828700E4F168 /* JWToolbarAdaptiveSpaceItem */,
 				8CE0BEFB1C9B445500834179 /* Twitch */,
 				8CE0BF0D1C9B445500834179 /* TwitchTests */,
 				8CE0BF181C9B445500834179 /* TwitchUITests */,
 				8CE0BEFA1C9B445500834179 /* Products */,
+				8CE0BF331C9B49E400834179 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,11 +196,15 @@
 		8CE0BEFB1C9B445500834179 /* Twitch */ = {
 			isa = PBXGroup;
 			children = (
+				8CE0BF751C9B599F00834179 /* Networking */,
 				8CE0BEFC1C9B445500834179 /* AppDelegate.swift */,
 				8CE0BEFE1C9B445500834179 /* ViewController.swift */,
 				8CE0BF001C9B445500834179 /* Assets.xcassets */,
 				8CE0BF021C9B445500834179 /* Main.storyboard */,
 				8CE0BF051C9B445500834179 /* Info.plist */,
+				8CE0BF521C9B51A100834179 /* Twitch-Bridging-Header.h */,
+				8C66C7171C9BF1E9001BEA30 /* MenuBarController.swift */,
+				8C66C71B1C9C4B37001BEA30 /* TwitchWindowController.swift */,
 			);
 			path = Twitch;
 			sourceTree = "<group>";
@@ -122,6 +227,36 @@
 			path = TwitchUITests;
 			sourceTree = "<group>";
 		};
+		8CE0BF331C9B49E400834179 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C5C66B01CA54A3100E4F168 /* Alamofire.framework.dSYM */,
+				8C5C66B11CA54A3100E4F168 /* MDPSplitView.framework.dSYM */,
+				8C5C66B21CA54A3100E4F168 /* Moya.framework.dSYM */,
+				8C5C66B31CA54A3100E4F168 /* ReactiveCocoa.framework.dSYM */,
+				8C5C66B41CA54A3100E4F168 /* ReactiveMoya.framework.dSYM */,
+				8C5C66B51CA54A3100E4F168 /* Result.framework.dSYM */,
+				8C5C66B61CA54A3100E4F168 /* SwiftyJSON.framework.dSYM */,
+				8C5C669B1CA54A1700E4F168 /* Alamofire.framework */,
+				8C5C669C1CA54A1700E4F168 /* MDPSplitView.framework */,
+				8C5C669D1CA54A1700E4F168 /* Moya.framework */,
+				8C5C669E1CA54A1700E4F168 /* ReactiveCocoa.framework */,
+				8C5C669F1CA54A1700E4F168 /* ReactiveMoya.framework */,
+				8C5C66A01CA54A1700E4F168 /* Result.framework */,
+				8C5C66A11CA54A1700E4F168 /* SwiftyJSON.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8CE0BF751C9B599F00834179 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8CE0BF761C9B59AD00834179 /* TwitchAPI.swift */,
+				8CD829071CA098B800124CCE /* Network.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,6 +267,8 @@
 				8CE0BEF51C9B445500834179 /* Sources */,
 				8CE0BEF61C9B445500834179 /* Frameworks */,
 				8CE0BEF71C9B445500834179 /* Resources */,
+				8CE0BF461C9B4A8900834179 /* Embed Frameworks */,
+				8CE0BF471C9B4AD000834179 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -190,6 +327,7 @@
 				TargetAttributes = {
 					8CE0BEF81C9B445500834179 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = HD29S69MGL;
 					};
 					8CE0BF091C9B445500834179 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -252,8 +390,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C5C66C41CA682AE00E4F168 /* JWToolbarAdaptiveSpaceItem.m in Sources */,
+				8CD829081CA098B800124CCE /* Network.swift in Sources */,
 				8CE0BEFF1C9B445500834179 /* ViewController.swift in Sources */,
+				8CE0BF771C9B59AD00834179 /* TwitchAPI.swift in Sources */,
 				8CE0BEFD1C9B445500834179 /* AppDelegate.swift in Sources */,
+				8C66C71C1C9C4B37001BEA30 /* TwitchWindowController.swift in Sources */,
+				8C66C7191C9BF1E9001BEA30 /* MenuBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,10 +528,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Twitch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = OMGITSADS.Twitch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Twitch/Twitch-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -397,10 +546,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Twitch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = OMGITSADS.Twitch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Twitch/Twitch-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -475,6 +630,7 @@
 				8CE0BF201C9B445500834179 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8CE0BF211C9B445500834179 /* Build configuration list for PBXNativeTarget "TwitchTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +639,7 @@
 				8CE0BF231C9B445500834179 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8CE0BF241C9B445500834179 /* Build configuration list for PBXNativeTarget "TwitchUITests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +648,7 @@
 				8CE0BF261C9B445500834179 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

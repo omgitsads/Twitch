@@ -1,0 +1,4 @@
+github "ReactiveCocoa/ReactiveCocoa"
+github "Moya/Moya"
+github "mdiep/MDPSplitView"
+github "SwiftyJSON/SwiftyJSON"
