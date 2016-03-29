@@ -46,10 +46,6 @@
          Resizes the adaptive toolbar item and makes sure that we don't
          make the toolbar do funky things when the linked view collapses
          */
-        if(self.window) {
-            NSLog(@"%d", self.window.styleMask);
-        }
-        
         if (self.linkedView.frame.size.width-self.offset > -8)
         {
             [self setMinSize:NSMakeSize(self.linkedView.frame.size.width-self.offset, 0)];

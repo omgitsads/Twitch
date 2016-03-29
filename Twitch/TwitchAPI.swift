@@ -62,9 +62,9 @@ extension TwitchAPI : TargetType {
     }
     
     var sampleData: NSData {
-//        switch self {
-//        default:
+        switch self {
+        default:
             return NSData()
-//        }
+        }
     }
 }
