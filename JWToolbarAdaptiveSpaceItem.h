@@ -15,7 +15,7 @@
 @interface JWToolbarAdaptiveSpaceItem : NSToolbarItem
 
 @property (weak, nonatomic) IBOutlet NSWindow *window;
-@property (weak, nonatomic) NSView *linkedView;
+@property (weak, nonatomic) IBOutlet NSView *linkedView;
 
 - (void)updateWidth;
 

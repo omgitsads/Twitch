@@ -7,6 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C0934F51CC8BFB900051F3B /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0934F41CC8BFB900051F3B /* CocoaAsyncSocket.framework */; };
+		8C0934F71CC8BFCF00051F3B /* CocoaAsyncSocket.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C0934F61CC8BFCF00051F3B /* CocoaAsyncSocket.framework.dSYM */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		8C0934F81CC8C0F900051F3B /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0934F41CC8BFB900051F3B /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C0D14F61CBD81A7001FE82D /* M3U8Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0D14F51CBD81A7001FE82D /* M3U8Parser.swift */; };
+		8C109A811CB64D7A00C84FED /* OMGNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C109A801CB64D7A00C84FED /* OMGNavigationController.swift */; };
+		8C109A831CB64F6300C84FED /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C109A821CB64F6300C84FED /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C109A851CB64F8100C84FED /* SnapKit.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C109A841CB64F8100C84FED /* SnapKit.framework.dSYM */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		8C109A861CB64F8A00C84FED /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C109A821CB64F6300C84FED /* SnapKit.framework */; };
+		8C109A891CB64FFF00C84FED /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C109A871CB64FFF00C84FED /* BackButton.swift */; };
+		8C109A8A1CB64FFF00C84FED /* TwitchStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C109A881CB64FFF00C84FED /* TwitchStyleKit.swift */; };
+		8C109A8C1CB6598100C84FED /* TwitchWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C109A8B1CB6598100C84FED /* TwitchWindow.xib */; };
+		8C109A901CB664B100C84FED /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C109A8F1CB664B100C84FED /* MainMenu.xib */; };
+		8C109A921CB6684200C84FED /* GamesCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C109A911CB6684200C84FED /* GamesCollectionView.xib */; };
+		8C4DAA9C1CBAEF9500D1FCC2 /* StreamsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DAA9B1CBAEF9500D1FCC2 /* StreamsCollectionViewController.swift */; };
+		8C4DAA9E1CBAF0BB00D1FCC2 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DAA9D1CBAF0BB00D1FCC2 /* Stream.swift */; };
+		8C4DAAA01CBAF6FD00D1FCC2 /* StreamViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DAA9F1CBAF6FD00D1FCC2 /* StreamViewItem.swift */; };
+		8C4DAAA21CBAF91D00D1FCC2 /* StreamViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C4DAAA11CBAF91D00D1FCC2 /* StreamViewItem.xib */; };
+		8C4DAAA41CBAF99A00D1FCC2 /* StreamsCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C4DAAA31CBAF99A00D1FCC2 /* StreamsCollectionView.xib */; };
+		8C4DAAA61CBC29F300D1FCC2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DAAA51CBC29F300D1FCC2 /* Constants.swift */; };
+		8C5A48571CC1232800D79E41 /* StreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A48551CC1232800D79E41 /* StreamViewController.swift */; };
+		8C5A48581CC1232800D79E41 /* StreamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C5A48561CC1232800D79E41 /* StreamViewController.xib */; };
+		8C5A485A1CC16CE900D79E41 /* StreamPanelItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C5A48591CC16CE900D79E41 /* StreamPanelItem.xib */; };
+		8C5A485C1CC16E0F00D79E41 /* StreamHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C5A485B1CC16E0F00D79E41 /* StreamHeaderView.xib */; };
+		8C5A485E1CC172BB00D79E41 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5A485D1CC172BB00D79E41 /* AVKit.framework */; };
+		8C5A48601CC173C400D79E41 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5A485F1CC173C400D79E41 /* AVFoundation.framework */; };
 		8C5C66A21CA54A1700E4F168 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5C669B1CA54A1700E4F168 /* Alamofire.framework */; };
 		8C5C66A31CA54A1700E4F168 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5C669B1CA54A1700E4F168 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C5C66A41CA54A1700E4F168 /* MDPSplitView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5C669C1CA54A1700E4F168 /* MDPSplitView.framework */; };
@@ -21,21 +46,29 @@
 		8C5C66AD1CA54A1700E4F168 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5C66A01CA54A1700E4F168 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C5C66AE1CA54A1700E4F168 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5C66A11CA54A1700E4F168 /* SwiftyJSON.framework */; };
 		8C5C66AF1CA54A1700E4F168 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5C66A11CA54A1700E4F168 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8C5C66B71CA54A3100E4F168 /* Alamofire.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C5C66B01CA54A3100E4F168 /* Alamofire.framework.dSYM */; };
-		8C5C66B81CA54A3100E4F168 /* MDPSplitView.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C5C66B11CA54A3100E4F168 /* MDPSplitView.framework.dSYM */; };
-		8C5C66B91CA54A3100E4F168 /* Moya.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C5C66B21CA54A3100E4F168 /* Moya.framework.dSYM */; };
-		8C5C66BA1CA54A3100E4F168 /* ReactiveCocoa.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C5C66B31CA54A3100E4F168 /* ReactiveCocoa.framework.dSYM */; };
-		8C5C66BB1CA54A3100E4F168 /* ReactiveMoya.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C5C66B41CA54A3100E4F168 /* ReactiveMoya.framework.dSYM */; };
-		8C5C66BC1CA54A3100E4F168 /* Result.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C5C66B51CA54A3100E4F168 /* Result.framework.dSYM */; };
-		8C5C66BD1CA54A3100E4F168 /* SwiftyJSON.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C5C66B61CA54A3100E4F168 /* SwiftyJSON.framework.dSYM */; };
+		8C5C66B71CA54A3100E4F168 /* Alamofire.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C5C66B01CA54A3100E4F168 /* Alamofire.framework.dSYM */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		8C5C66B81CA54A3100E4F168 /* MDPSplitView.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C5C66B11CA54A3100E4F168 /* MDPSplitView.framework.dSYM */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		8C5C66B91CA54A3100E4F168 /* Moya.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C5C66B21CA54A3100E4F168 /* Moya.framework.dSYM */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		8C5C66BA1CA54A3100E4F168 /* ReactiveCocoa.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C5C66B31CA54A3100E4F168 /* ReactiveCocoa.framework.dSYM */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		8C5C66BB1CA54A3100E4F168 /* ReactiveMoya.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C5C66B41CA54A3100E4F168 /* ReactiveMoya.framework.dSYM */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		8C5C66BC1CA54A3100E4F168 /* Result.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C5C66B51CA54A3100E4F168 /* Result.framework.dSYM */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		8C5C66BD1CA54A3100E4F168 /* SwiftyJSON.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C5C66B61CA54A3100E4F168 /* SwiftyJSON.framework.dSYM */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		8C5C66C41CA682AE00E4F168 /* JWToolbarAdaptiveSpaceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C66C31CA682AE00E4F168 /* JWToolbarAdaptiveSpaceItem.m */; };
+		8C5C66CA1CAEF8CB00E4F168 /* GameViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C5C66C91CAEF8CB00E4F168 /* GameViewItem.xib */; };
+		8C5C66CD1CB2B42700E4F168 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C66CC1CB2B42700E4F168 /* User.swift */; };
+		8C5C66CF1CB2B7DF00E4F168 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C66CE1CB2B7DF00E4F168 /* Game.swift */; };
+		8C5C66D11CB2BC2D00E4F168 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5C66D01CB2BC2D00E4F168 /* ObjectMapper.framework */; };
+		8C5C66D21CB2BC2D00E4F168 /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5C66D01CB2BC2D00E4F168 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C5C66D41CB2BC3700E4F168 /* ObjectMapper.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C5C66D31CB2BC3700E4F168 /* ObjectMapper.framework.dSYM */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		8C5C66D61CB2C99000E4F168 /* GameViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C66D51CB2C99000E4F168 /* GameViewItem.swift */; };
 		8C66C7191C9BF1E9001BEA30 /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C66C7171C9BF1E9001BEA30 /* MenuBarController.swift */; };
 		8C66C71C1C9C4B37001BEA30 /* TwitchWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C66C71B1C9C4B37001BEA30 /* TwitchWindowController.swift */; };
+		8CB965361CE112B400C1ECB5 /* ClosureKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB965351CE112B400C1ECB5 /* ClosureKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8CB965381CE112BD00C1ECB5 /* ClosureKit.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8CB965371CE112BD00C1ECB5 /* ClosureKit.framework.dSYM */; };
 		8CD829081CA098B800124CCE /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD829071CA098B800124CCE /* Network.swift */; };
 		8CE0BEFD1C9B445500834179 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0BEFC1C9B445500834179 /* AppDelegate.swift */; };
-		8CE0BEFF1C9B445500834179 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0BEFE1C9B445500834179 /* ViewController.swift */; };
+		8CE0BEFF1C9B445500834179 /* GamesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0BEFE1C9B445500834179 /* GamesCollectionViewController.swift */; };
 		8CE0BF011C9B445500834179 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CE0BF001C9B445500834179 /* Assets.xcassets */; };
-		8CE0BF041C9B445500834179 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CE0BF021C9B445500834179 /* Main.storyboard */; };
 		8CE0BF0F1C9B445500834179 /* TwitchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0BF0E1C9B445500834179 /* TwitchTests.swift */; };
 		8CE0BF1A1C9B445500834179 /* TwitchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0BF191C9B445500834179 /* TwitchUITests.swift */; };
 		8CE0BF771C9B59AD00834179 /* TwitchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0BF761C9B59AD00834179 /* TwitchAPI.swift */; };
@@ -65,12 +98,16 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				8C0934F81CC8C0F900051F3B /* CocoaAsyncSocket.framework in Embed Frameworks */,
 				8C5C66A51CA54A1700E4F168 /* MDPSplitView.framework in Embed Frameworks */,
 				8C5C66AB1CA54A1700E4F168 /* ReactiveMoya.framework in Embed Frameworks */,
 				8C5C66A71CA54A1700E4F168 /* Moya.framework in Embed Frameworks */,
 				8C5C66AD1CA54A1700E4F168 /* Result.framework in Embed Frameworks */,
+				8CB965361CE112B400C1ECB5 /* ClosureKit.framework in Embed Frameworks */,
+				8C109A831CB64F6300C84FED /* SnapKit.framework in Embed Frameworks */,
 				8C5C66AF1CA54A1700E4F168 /* SwiftyJSON.framework in Embed Frameworks */,
 				8C5C66A31CA54A1700E4F168 /* Alamofire.framework in Embed Frameworks */,
+				8C5C66D21CB2BC2D00E4F168 /* ObjectMapper.framework in Embed Frameworks */,
 				8C5C66A91CA54A1700E4F168 /* ReactiveCocoa.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -80,12 +117,16 @@
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 16;
+			dstSubfolderSpec = 10;
 			files = (
+				8C0934F71CC8BFCF00051F3B /* CocoaAsyncSocket.framework.dSYM in CopyFiles */,
+				8CB965381CE112BD00C1ECB5 /* ClosureKit.framework.dSYM in CopyFiles */,
 				8C5C66B71CA54A3100E4F168 /* Alamofire.framework.dSYM in CopyFiles */,
 				8C5C66B81CA54A3100E4F168 /* MDPSplitView.framework.dSYM in CopyFiles */,
+				8C5C66D41CB2BC3700E4F168 /* ObjectMapper.framework.dSYM in CopyFiles */,
 				8C5C66B91CA54A3100E4F168 /* Moya.framework.dSYM in CopyFiles */,
 				8C5C66BA1CA54A3100E4F168 /* ReactiveCocoa.framework.dSYM in CopyFiles */,
+				8C109A851CB64F8100C84FED /* SnapKit.framework.dSYM in CopyFiles */,
 				8C5C66BB1CA54A3100E4F168 /* ReactiveMoya.framework.dSYM in CopyFiles */,
 				8C5C66BC1CA54A3100E4F168 /* Result.framework.dSYM in CopyFiles */,
 				8C5C66BD1CA54A3100E4F168 /* SwiftyJSON.framework.dSYM in CopyFiles */,
@@ -95,6 +136,29 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8C0934F41CC8BFB900051F3B /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/Mac/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
+		8C0934F61CC8BFCF00051F3B /* CocoaAsyncSocket.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = CocoaAsyncSocket.framework.dSYM; path = Carthage/Build/Mac/CocoaAsyncSocket.framework.dSYM; sourceTree = "<group>"; };
+		8C0D14F51CBD81A7001FE82D /* M3U8Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M3U8Parser.swift; sourceTree = "<group>"; };
+		8C109A801CB64D7A00C84FED /* OMGNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMGNavigationController.swift; sourceTree = "<group>"; };
+		8C109A821CB64F6300C84FED /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/Mac/SnapKit.framework; sourceTree = "<group>"; };
+		8C109A841CB64F8100C84FED /* SnapKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SnapKit.framework.dSYM; path = Carthage/Build/Mac/SnapKit.framework.dSYM; sourceTree = "<group>"; };
+		8C109A871CB64FFF00C84FED /* BackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		8C109A881CB64FFF00C84FED /* TwitchStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitchStyleKit.swift; sourceTree = "<group>"; };
+		8C109A8B1CB6598100C84FED /* TwitchWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitchWindow.xib; sourceTree = "<group>"; };
+		8C109A8F1CB664B100C84FED /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		8C109A911CB6684200C84FED /* GamesCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GamesCollectionView.xib; path = ../GamesCollectionView.xib; sourceTree = "<group>"; };
+		8C4DAA9B1CBAEF9500D1FCC2 /* StreamsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamsCollectionViewController.swift; sourceTree = "<group>"; };
+		8C4DAA9D1CBAF0BB00D1FCC2 /* Stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
+		8C4DAA9F1CBAF6FD00D1FCC2 /* StreamViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamViewItem.swift; sourceTree = "<group>"; };
+		8C4DAAA11CBAF91D00D1FCC2 /* StreamViewItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StreamViewItem.xib; sourceTree = "<group>"; };
+		8C4DAAA31CBAF99A00D1FCC2 /* StreamsCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StreamsCollectionView.xib; sourceTree = "<group>"; };
+		8C4DAAA51CBC29F300D1FCC2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8C5A48551CC1232800D79E41 /* StreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamViewController.swift; sourceTree = "<group>"; };
+		8C5A48561CC1232800D79E41 /* StreamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StreamViewController.xib; sourceTree = "<group>"; };
+		8C5A48591CC16CE900D79E41 /* StreamPanelItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StreamPanelItem.xib; sourceTree = "<group>"; };
+		8C5A485B1CC16E0F00D79E41 /* StreamHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StreamHeaderView.xib; sourceTree = "<group>"; };
+		8C5A485D1CC172BB00D79E41 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		8C5A485F1CC173C400D79E41 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		8C5C669B1CA54A1700E4F168 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
 		8C5C669C1CA54A1700E4F168 /* MDPSplitView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MDPSplitView.framework; path = Carthage/Build/Mac/MDPSplitView.framework; sourceTree = "<group>"; };
 		8C5C669D1CA54A1700E4F168 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/Mac/Moya.framework; sourceTree = "<group>"; };
@@ -111,14 +175,21 @@
 		8C5C66B61CA54A3100E4F168 /* SwiftyJSON.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SwiftyJSON.framework.dSYM; path = Carthage/Build/Mac/SwiftyJSON.framework.dSYM; sourceTree = "<group>"; };
 		8C5C66C21CA682A200E4F168 /* JWToolbarAdaptiveSpaceItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWToolbarAdaptiveSpaceItem.h; sourceTree = "<group>"; };
 		8C5C66C31CA682AE00E4F168 /* JWToolbarAdaptiveSpaceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWToolbarAdaptiveSpaceItem.m; sourceTree = "<group>"; };
+		8C5C66C91CAEF8CB00E4F168 /* GameViewItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewItem.xib; sourceTree = "<group>"; };
+		8C5C66CC1CB2B42700E4F168 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8C5C66CE1CB2B7DF00E4F168 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		8C5C66D01CB2BC2D00E4F168 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/Mac/ObjectMapper.framework; sourceTree = "<group>"; };
+		8C5C66D31CB2BC3700E4F168 /* ObjectMapper.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ObjectMapper.framework.dSYM; path = Carthage/Build/Mac/ObjectMapper.framework.dSYM; sourceTree = "<group>"; };
+		8C5C66D51CB2C99000E4F168 /* GameViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewItem.swift; sourceTree = "<group>"; };
 		8C66C7171C9BF1E9001BEA30 /* MenuBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
 		8C66C71B1C9C4B37001BEA30 /* TwitchWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitchWindowController.swift; sourceTree = "<group>"; };
+		8CB965351CE112B400C1ECB5 /* ClosureKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ClosureKit.framework; path = Carthage/Build/Mac/ClosureKit.framework; sourceTree = "<group>"; };
+		8CB965371CE112BD00C1ECB5 /* ClosureKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ClosureKit.framework.dSYM; path = Carthage/Build/Mac/ClosureKit.framework.dSYM; sourceTree = "<group>"; };
 		8CD829071CA098B800124CCE /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		8CE0BEF91C9B445500834179 /* Twitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CE0BEFC1C9B445500834179 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8CE0BEFE1C9B445500834179 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8CE0BEFE1C9B445500834179 /* GamesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCollectionViewController.swift; sourceTree = "<group>"; };
 		8CE0BF001C9B445500834179 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8CE0BF031C9B445500834179 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8CE0BF051C9B445500834179 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CE0BF0A1C9B445500834179 /* TwitchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CE0BF0E1C9B445500834179 /* TwitchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchTests.swift; sourceTree = "<group>"; };
@@ -135,12 +206,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C5A48601CC173C400D79E41 /* AVFoundation.framework in Frameworks */,
+				8C5A485E1CC172BB00D79E41 /* AVKit.framework in Frameworks */,
 				8C5C66A41CA54A1700E4F168 /* MDPSplitView.framework in Frameworks */,
 				8C5C66AA1CA54A1700E4F168 /* ReactiveMoya.framework in Frameworks */,
 				8C5C66A61CA54A1700E4F168 /* Moya.framework in Frameworks */,
+				8C0934F51CC8BFB900051F3B /* CocoaAsyncSocket.framework in Frameworks */,
 				8C5C66AC1CA54A1700E4F168 /* Result.framework in Frameworks */,
+				8C109A861CB64F8A00C84FED /* SnapKit.framework in Frameworks */,
 				8C5C66AE1CA54A1700E4F168 /* SwiftyJSON.framework in Frameworks */,
 				8C5C66A21CA54A1700E4F168 /* Alamofire.framework in Frameworks */,
+				8C5C66D11CB2BC2D00E4F168 /* ObjectMapper.framework in Frameworks */,
 				8C5C66A81CA54A1700E4F168 /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,6 +238,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C109A951CB686E400C84FED /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				8C5A48561CC1232800D79E41 /* StreamViewController.xib */,
+				8C4DAAA31CBAF99A00D1FCC2 /* StreamsCollectionView.xib */,
+				8C4DAAA11CBAF91D00D1FCC2 /* StreamViewItem.xib */,
+				8C109A911CB6684200C84FED /* GamesCollectionView.xib */,
+				8C5C66C91CAEF8CB00E4F168 /* GameViewItem.xib */,
+				8C109A8B1CB6598100C84FED /* TwitchWindow.xib */,
+				8C109A8F1CB664B100C84FED /* MainMenu.xib */,
+				8C5A48591CC16CE900D79E41 /* StreamPanelItem.xib */,
+				8C5A485B1CC16E0F00D79E41 /* StreamHeaderView.xib */,
+			);
+			name = Nibs;
+			sourceTree = "<group>";
+		};
+		8C109A961CB686F400C84FED /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8CE0BEFE1C9B445500834179 /* GamesCollectionViewController.swift */,
+				8C109A801CB64D7A00C84FED /* OMGNavigationController.swift */,
+				8C66C7171C9BF1E9001BEA30 /* MenuBarController.swift */,
+				8C66C71B1C9C4B37001BEA30 /* TwitchWindowController.swift */,
+				8C4DAA9B1CBAEF9500D1FCC2 /* StreamsCollectionViewController.swift */,
+				8C5A48551CC1232800D79E41 /* StreamViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8C109A971CB6870500C84FED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8C5C66D51CB2C99000E4F168 /* GameViewItem.swift */,
+				8C4DAA9F1CBAF6FD00D1FCC2 /* StreamViewItem.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8C109A981CB6870B00C84FED /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				8C109A871CB64FFF00C84FED /* BackButton.swift */,
+				8C109A881CB64FFF00C84FED /* TwitchStyleKit.swift */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
 		8C5C66C11CA6828700E4F168 /* JWToolbarAdaptiveSpaceItem */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +292,16 @@
 				8C5C66C31CA682AE00E4F168 /* JWToolbarAdaptiveSpaceItem.m */,
 			);
 			name = JWToolbarAdaptiveSpaceItem;
+			sourceTree = "<group>";
+		};
+		8C5C66CB1CB2B3FA00E4F168 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8C5C66CC1CB2B42700E4F168 /* User.swift */,
+				8C5C66CE1CB2B7DF00E4F168 /* Game.swift */,
+				8C4DAA9D1CBAF0BB00D1FCC2 /* Stream.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		8CE0BEF01C9B445500834179 = {
@@ -196,15 +329,18 @@
 		8CE0BEFB1C9B445500834179 /* Twitch */ = {
 			isa = PBXGroup;
 			children = (
+				8C0D14F51CBD81A7001FE82D /* M3U8Parser.swift */,
+				8C5C66CB1CB2B3FA00E4F168 /* Models */,
 				8CE0BF751C9B599F00834179 /* Networking */,
 				8CE0BEFC1C9B445500834179 /* AppDelegate.swift */,
-				8CE0BEFE1C9B445500834179 /* ViewController.swift */,
+				8C109A971CB6870500C84FED /* Views */,
+				8C109A981CB6870B00C84FED /* Buttons */,
 				8CE0BF001C9B445500834179 /* Assets.xcassets */,
-				8CE0BF021C9B445500834179 /* Main.storyboard */,
 				8CE0BF051C9B445500834179 /* Info.plist */,
 				8CE0BF521C9B51A100834179 /* Twitch-Bridging-Header.h */,
-				8C66C7171C9BF1E9001BEA30 /* MenuBarController.swift */,
-				8C66C71B1C9C4B37001BEA30 /* TwitchWindowController.swift */,
+				8C109A961CB686F400C84FED /* Controllers */,
+				8C109A951CB686E400C84FED /* Nibs */,
+				8C4DAAA51CBC29F300D1FCC2 /* Constants.swift */,
 			);
 			path = Twitch;
 			sourceTree = "<group>";
@@ -230,6 +366,16 @@
 		8CE0BF331C9B49E400834179 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8CB965371CE112BD00C1ECB5 /* ClosureKit.framework.dSYM */,
+				8CB965351CE112B400C1ECB5 /* ClosureKit.framework */,
+				8C0934F61CC8BFCF00051F3B /* CocoaAsyncSocket.framework.dSYM */,
+				8C0934F41CC8BFB900051F3B /* CocoaAsyncSocket.framework */,
+				8C5A485F1CC173C400D79E41 /* AVFoundation.framework */,
+				8C5A485D1CC172BB00D79E41 /* AVKit.framework */,
+				8C109A841CB64F8100C84FED /* SnapKit.framework.dSYM */,
+				8C109A821CB64F6300C84FED /* SnapKit.framework */,
+				8C5C66D31CB2BC3700E4F168 /* ObjectMapper.framework.dSYM */,
+				8C5C66D01CB2BC2D00E4F168 /* ObjectMapper.framework */,
 				8C5C66B01CA54A3100E4F168 /* Alamofire.framework.dSYM */,
 				8C5C66B11CA54A3100E4F168 /* MDPSplitView.framework.dSYM */,
 				8C5C66B21CA54A3100E4F168 /* Moya.framework.dSYM */,
@@ -365,7 +511,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CE0BF011C9B445500834179 /* Assets.xcassets in Resources */,
-				8CE0BF041C9B445500834179 /* Main.storyboard in Resources */,
+				8C109A921CB6684200C84FED /* GamesCollectionView.xib in Resources */,
+				8C109A8C1CB6598100C84FED /* TwitchWindow.xib in Resources */,
+				8C4DAAA41CBAF99A00D1FCC2 /* StreamsCollectionView.xib in Resources */,
+				8C5A48581CC1232800D79E41 /* StreamViewController.xib in Resources */,
+				8C5A485A1CC16CE900D79E41 /* StreamPanelItem.xib in Resources */,
+				8C4DAAA21CBAF91D00D1FCC2 /* StreamViewItem.xib in Resources */,
+				8C5C66CA1CAEF8CB00E4F168 /* GameViewItem.xib in Resources */,
+				8C109A901CB664B100C84FED /* MainMenu.xib in Resources */,
+				8C5A485C1CC16E0F00D79E41 /* StreamHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,12 +545,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C5C66C41CA682AE00E4F168 /* JWToolbarAdaptiveSpaceItem.m in Sources */,
+				8C4DAAA61CBC29F300D1FCC2 /* Constants.swift in Sources */,
+				8C5C66CF1CB2B7DF00E4F168 /* Game.swift in Sources */,
 				8CD829081CA098B800124CCE /* Network.swift in Sources */,
-				8CE0BEFF1C9B445500834179 /* ViewController.swift in Sources */,
+				8CE0BEFF1C9B445500834179 /* GamesCollectionViewController.swift in Sources */,
+				8C4DAA9E1CBAF0BB00D1FCC2 /* Stream.swift in Sources */,
+				8C4DAAA01CBAF6FD00D1FCC2 /* StreamViewItem.swift in Sources */,
+				8C0D14F61CBD81A7001FE82D /* M3U8Parser.swift in Sources */,
+				8C4DAA9C1CBAEF9500D1FCC2 /* StreamsCollectionViewController.swift in Sources */,
 				8CE0BF771C9B59AD00834179 /* TwitchAPI.swift in Sources */,
+				8C109A811CB64D7A00C84FED /* OMGNavigationController.swift in Sources */,
+				8C5C66CD1CB2B42700E4F168 /* User.swift in Sources */,
 				8CE0BEFD1C9B445500834179 /* AppDelegate.swift in Sources */,
+				8C109A8A1CB64FFF00C84FED /* TwitchStyleKit.swift in Sources */,
+				8C109A891CB64FFF00C84FED /* BackButton.swift in Sources */,
 				8C66C71C1C9C4B37001BEA30 /* TwitchWindowController.swift in Sources */,
 				8C66C7191C9BF1E9001BEA30 /* MenuBarController.swift in Sources */,
+				8C5A48571CC1232800D79E41 /* StreamViewController.swift in Sources */,
+				8C5C66D61CB2C99000E4F168 /* GameViewItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,17 +596,6 @@
 			targetProxy = 8CE0BF161C9B445500834179 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		8CE0BF021C9B445500834179 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8CE0BF031C9B445500834179 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8CE0BF1C1C9B445500834179 /* Debug */ = {

@@ -10,13 +10,14 @@ import Cocoa
 
 class TwitchWindowController: NSWindowController {
 
-    @IBOutlet weak var spacerToolbar: JWToolbarAdaptiveSpaceItem?
+    @IBOutlet weak var spacerToolbar: JWToolbarAdaptiveSpaceItem!
+    @IBOutlet weak var splitView: MDPSplitView!
     
-    var splitView: MDPSplitView? { return self.window?.contentView?.subviews.first as? MDPSplitView }
-    
-    var menuBarSplit: NSView? { return splitView?.subviews.first }
-    
+    @IBOutlet weak var menuBarSplit: NSView!
     @IBOutlet weak var menuWidthConstraint: NSLayoutConstraint?
+    
+    @IBOutlet weak var menuBarController: MenuBarController!
+    @IBOutlet weak var navigationController: TwitchNavigationController!
     
     var lastMenuBarWidth: CGFloat = 110.0
     
@@ -27,16 +28,14 @@ class TwitchWindowController: NSWindowController {
             aWindow.titleVisibility = .Hidden
         }
         
-        if let aSplitView = self.splitView {
-            if let leftSplit = aSplitView.subviews.first {
-                self.spacerToolbar?.linkedView = leftSplit
-            }
-        }
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TwitchWindowController.didLogin(_:)), name: Twitch.DidAuthenticate, object: nil)
+        
+        let gamesViewController = GamesCollectionViewController(nibName: "GamesCollectionView", bundle: nil)!
+        self.navigationController.setRootViewController(gamesViewController)
     }
     
     func mainSplitViewWillResizeSubviewsHandler(notification: NSNotification) {
         if let menuWidth = self.menuBarSplit?.frame.size.width {
-            print(menuWidth)
             self.lastMenuBarWidth = menuWidth
         }
     }
@@ -45,11 +44,11 @@ class TwitchWindowController: NSWindowController {
         if let aSplitView = self.splitView {
             aSplitView.adjustSubviews()
             
-            if aSplitView.isSubviewCollapsed(self.menuBarSplit!) || self.menuBarSplit!.frame.size.width == 0 {
+            if aSplitView.isSubviewCollapsed(self.menuBarSplit) || self.menuBarSplit!.frame.size.width == 0 {
                 var width: CGFloat
                 
                 if self.lastMenuBarWidth < 10 {
-                    width = 110.0
+                    width = 250.0
                 } else {
                     width = self.lastMenuBarWidth
                 }
@@ -65,9 +64,13 @@ class TwitchWindowController: NSWindowController {
     @IBAction func login(sender: AnyObject) {
         let clientId = "qpc3uyx3odeip09jbgz4nweuef19r2g"
         let redirectUri = "twitchmac://login"
-        let scopes = "user_read+user_subscriptions+chat_login"
+        let scopes = "user_read+user_follows_edit+user_subscriptions+chat_login+channel_feed_read+channel_feed_edit"
         let url = NSURL(string: "https://api.twitch.tv/kraken/oauth2/authorize?response_type=token&client_id=\(clientId)&redirect_uri=\(redirectUri)&scopes=\(scopes)")!
         
         NSWorkspace.sharedWorkspace().openURL(url)
+    }
+    
+    func didLogin(notification: NSNotification) {
+        print("Logged In: \(notification.object as! String)")
     }
 }

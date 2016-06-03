@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView wantsLayer="YES" id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="330" height="239"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3sV-Df-h51">
+                    <rect key="frame" x="3" y="20" width="324" height="19"/>
+                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" title="Label" id="pQw-ru-stu">
+                        <font key="font" size="13" name="SFUIDisplay-Semibold"/>
+                        <color key="textColor" red="0.22352941176470587" green="0.22352941176470587" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <imageView wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j7o-m6-51Y">
+                    <rect key="frame" x="5" y="44" width="320" height="180"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="JPC-Vf-UEb"/>
+                        <constraint firstAttribute="height" constant="180" id="TEg-zb-h2n"/>
+                    </constraints>
+                    <shadow key="shadow" blurRadius="3">
+                        <size key="offset" width="0.0" height="-3"/>
+                        <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.64735704787234039" colorSpace="calibratedRGB"/>
+                    </shadow>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="video-default" id="7cy-JV-Iep"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xdn-Vk-WEl">
+                    <rect key="frame" x="3" y="3" width="324" height="14"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Label" id="XNv-63-Rda">
+                        <font key="font" size="9" name="SFUIDisplay-Regular"/>
+                        <color key="textColor" white="0.33107250188959059" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="j7o-m6-51Y" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="CSd-iO-e8L"/>
+                <constraint firstItem="3sV-Df-h51" firstAttribute="width" secondItem="j7o-m6-51Y" secondAttribute="width" id="EFL-I8-NLp"/>
+                <constraint firstItem="3sV-Df-h51" firstAttribute="leading" secondItem="j7o-m6-51Y" secondAttribute="leading" id="FSt-qi-cvj"/>
+                <constraint firstItem="xdn-Vk-WEl" firstAttribute="leading" secondItem="3sV-Df-h51" secondAttribute="leading" id="GLS-g1-pIi"/>
+                <constraint firstItem="xdn-Vk-WEl" firstAttribute="top" secondItem="3sV-Df-h51" secondAttribute="bottom" constant="3" id="Mh5-lf-i0e"/>
+                <constraint firstItem="3sV-Df-h51" firstAttribute="top" secondItem="j7o-m6-51Y" secondAttribute="bottom" constant="5" id="bvI-rZ-RUg"/>
+                <constraint firstItem="j7o-m6-51Y" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="15" id="tWB-yQ-mWO"/>
+                <constraint firstItem="xdn-Vk-WEl" firstAttribute="width" secondItem="3sV-Df-h51" secondAttribute="width" id="wB9-Ny-jOz"/>
+            </constraints>
+            <point key="canvasLocation" x="848" y="516.5"/>
+        </customView>
+        <collectionViewItem identifier="GameViewItem" id="OmI-cU-eeh" customClass="StreamViewItem" customModule="Twitch" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="j7o-m6-51Y" id="eQJ-pA-E7m"/>
+                <outlet property="streamNameLabel" destination="3sV-Df-h51" id="PuE-aF-Rbb"/>
+                <outlet property="view" destination="c22-O7-iKe" id="PhE-Fr-yzz"/>
+                <outlet property="viewersLabel" destination="xdn-Vk-WEl" id="uwQ-ki-Mzj"/>
+            </connections>
+        </collectionViewItem>
+    </objects>
+    <resources>
+        <image name="video-default" width="320" height="180"/>
+    </resources>
+</document>

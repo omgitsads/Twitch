@@ -7,8 +7,9 @@
 //
 
 import Cocoa
-import ReactiveMoya
+import Moya
 import SwiftyJSON
+import ObjectMapper
 
 enum MenuItemType {
     case Browse
@@ -21,6 +22,7 @@ struct MenuItem {
     var icon: NSImage?
     var type: MenuItemType
     var endpoint: TwitchAPI?
+    var record: Mappable?
 }
 
 class BrowseTableRowView: NSTableRowView {
@@ -43,41 +45,98 @@ class ChannelCellView: NSTableCellView {
 }
 
 class MenuBarController: NSViewController {
-    @IBOutlet weak var tableView: NSTableView?
+    @IBOutlet weak var windowController: TwitchWindowController!
+    @IBOutlet weak var tableView: NSTableView!
     var menuItems: Array<MenuItem> = []
-    let twitchProvider = ReactiveCocoaMoyaProvider<TwitchAPI>()
+    var followerItems: Array<MenuItem> = []
+    let provider = MoyaProvider(endpointClosure: endpointClosure)
+    var authorisedTimer: NSTimer?
+    var authenticationIsRefreshing = false
     
     override func viewDidLoad() {
         setupMenu()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MenuBarController.didLogin(_:)), name: Twitch.DidAuthenticate, object: nil)
     }
     
     func setupMenu() {
-        let games = MenuItem(title: "Games", icon: NSImage(named: "GamesIcon"), type: .Browse, endpoint: .TopGames)
-        let channels = MenuItem(title: "Channels", icon: NSImage(named: "ChannelsIcon"), type: .Browse, endpoint: .Streams)
-        let videos = MenuItem(title: "Videos", icon: NSImage(named: "VideosIcon"), type: .Browse, endpoint: .TopVideos)
-        let followedHeader = MenuItem(title: "Followed Channels", icon: nil, type: .Header, endpoint: nil)
-        let bulldogChannel = MenuItem(title: "AdmiralBulldog", icon: NSImage(named: "SubscriberIcon"), type: .Followed, endpoint: .Channel(channel: "admiralbulldog"))
-        let singChannel = MenuItem(title: "Sing_sing", icon: NSImage(named: "FollowerIcon"), type: .Followed, endpoint: .Channel(channel: "sing_sing"))
-        let dreamleagueChannel = MenuItem(title: "DreamLeague", icon: NSImage(named: "FollowerIcon"), type: .Followed, endpoint: .Channel(channel: "dreamleague"))
+        let games = MenuItem(title: "Games", icon: NSImage(named: "GamesIcon"), type: .Browse, endpoint: .TopGames(limit: 100, offset: 0), record: nil)
+        let channels = MenuItem(title: "Channels", icon: NSImage(named: "ChannelsIcon"), type: .Browse, endpoint: .Streams(limit: 100, offset: 0), record: nil)
+        let videos = MenuItem(title: "Videos", icon: NSImage(named: "VideosIcon"), type: .Browse, endpoint: .TopVideos, record: nil)
         
-        self.menuItems = [games, channels, videos, followedHeader, bulldogChannel, singChannel, dreamleagueChannel]
+        self.menuItems = [games, channels, videos]
         self.tableView?.reloadData()
     }
     
     override func awakeFromNib() {
-        self.tableView?.selectRowIndexes(NSIndexSet(index: 0), byExtendingSelection: false)
+        if self.tableView.numberOfRows > 0 {
+            self.tableView?.selectRowIndexes(NSIndexSet(index: 0), byExtendingSelection: false)
+        }
+    }
+    
+    func didLogin(notification: NSNotification) {
+        self.getFollowedStreams()
+        
+        if (self.authorisedTimer == nil) {
+            self.authorisedTimer = NSTimer(timeInterval: 60, target: self, selector: #selector(MenuBarController.getFollowedStreams), userInfo: nil, repeats: true)
+            NSRunLoop.currentRunLoop().addTimer(self.authorisedTimer!, forMode: NSRunLoopCommonModes)
+        }
+    }
+    
+    func getFollowedStreams() {
+        provider.request(TwitchAPI.FollowedStreams) { result in
+            switch result {
+            case let .Success(moyaResponse):
+                // Reset the follower items
+                self.followerItems = []
+                
+                let json = JSON(data: moyaResponse.data)
+                let collectionJSON = json.dictionary!["streams"]!.array!
+                
+                if(collectionJSON.count > 0) {
+                    let followedHeader = MenuItem(title: "Followed Channels", icon: nil, type: .Header, endpoint: nil, record: nil)
+                    self.followerItems.append(followedHeader)
+                }
+                
+                for (_, recordJSON) in collectionJSON.enumerate() {
+                    if let stream = Mapper<Stream>().map(recordJSON.rawValue) {
+                        let menuItem = MenuItem(title: stream.name!, icon: NSImage(named: "FollowerIcon"), type: .Followed, endpoint: nil, record: stream)
+                        
+                        self.followerItems.append(menuItem)
+                    }
+                }
+                // Wrap this reload with authenticationIsRefreshing, so we don't trigger a change of view controller
+                self.authenticationIsRefreshing = true
+                self.tableView.reloadData()
+            case let .Failure(_):
+                print("Failed")
+            }
+        }
     }
 }
 
 extension MenuBarController: NSTableViewDataSource {
     func numberOfRowsInTableView(tableView: NSTableView) -> Int {
-        return self.menuItems.count
+        return (self.menuItems.count + self.followerItems.count)
     }
 }
 
 extension MenuBarController: NSTableViewDelegate {
+    func menuItem(row: Int) -> MenuItem {
+        var item: MenuItem!
+        if row > (self.menuItems.count-1) {
+            let followerRow = row - (self.menuItems.count)
+            item = self.followerItems[followerRow]
+        } else {
+            item = self.menuItems[row]
+        }
+        
+        return item
+    }
+    
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        let item = self.menuItems[row]
+        let item = self.menuItem(row)
+        
         var cell: NSTableCellView?
         
         switch item.type {
@@ -98,13 +157,13 @@ extension MenuBarController: NSTableViewDelegate {
     }
     
     func tableView(tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
-        let item = self.menuItems[row]
+        let item = self.menuItem(row)
         
         switch item.type {
         case .Browse:
             return 32.0
         case .Header:
-            return 20.0
+            return 30.0
         case .Followed:
             return 24.0
         }
@@ -112,7 +171,7 @@ extension MenuBarController: NSTableViewDelegate {
     
     func tableView(tableView: NSTableView, rowViewForRow row: Int) -> NSTableRowView? {
         var view: NSTableRowView?
-        let item = self.menuItems[row]
+        let item = self.menuItem(row)
         
         switch item.type {
         case .Browse, .Followed:
@@ -136,7 +195,7 @@ extension MenuBarController: NSTableViewDelegate {
     }
     
     func tableView(tableView: NSTableView, shouldSelectRow row: Int) -> Bool {
-        let item = self.menuItems[row]
+        let item = self.menuItem(row)
         
         switch item.type {
         case .Browse, .Followed:
@@ -147,15 +206,29 @@ extension MenuBarController: NSTableViewDelegate {
     }
     
     func tableViewSelectionDidChange(notification: NSNotification) {
-        let selectedItem: MenuItem = self.menuItems[self.tableView!.selectedRow]
-
-        twitchProvider.request(selectedItem.endpoint!).start { (event) -> Void in
-            switch event {
-            case .Next(let response):
-                let json = JSON(data: response.data)
-                print(json)
-            case .Failed(let error):
-                print(error)
+        if(self.authenticationIsRefreshing) {
+            self.authenticationIsRefreshing = false
+            return
+        }
+        
+        let index = self.tableView!.selectedRow
+        if(index >= 0) {
+            let selectedItem = self.menuItem(index)
+            
+            switch selectedItem.type {
+            case .Browse:
+                if selectedItem.title == "Games" {
+                    let gamesViewController = GamesCollectionViewController(nibName: "GamesCollectionView", bundle: nil)!
+                    self.windowController.navigationController.setRootViewController(gamesViewController)
+                } else if selectedItem.title == "Channels" {
+                    let streamsViewController = StreamsCollectionViewController(nibName: "StreamsCollectionView", bundle: nil)!
+                    self.windowController.navigationController.setRootViewController(streamsViewController)
+                }
+            case .Followed:
+                let streamViewController = StreamViewController(nibName: "StreamViewController", bundle: nil)!
+                streamViewController.stream = selectedItem.record as! Stream
+                
+                self.windowController.navigationController.setRootViewController(streamViewController)
             default:
                 break
             }

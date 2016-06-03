@@ -7,27 +7,49 @@
 //
 
 import Foundation
-import ReactiveMoya
+import Moya
 
 enum TwitchAPI {
-    case TopGames
-    case Streams
+    case TopGames(limit: Int, offset: Int)
+    case Streams(limit: Int, offset: Int)
     case Stream(stream: String)
     case Channel(channel: String)
-    case GameStreams(game: String)
+    case GameStreams(game: String, limit: Int, offset: Int)
     case FeaturedStreams
-    case FollowedStreams
     case TopVideos
+    case User
+    case FollowedStreams
+    case FollowedVideos
+}
+
+public func url(route: TargetType) -> String {
+    return route.baseURL.URLByAppendingPathComponent(route.path).absoluteString
+}
+
+let endpointClosure = { (target: TwitchAPI) -> Endpoint<TwitchAPI> in
+    var endpoint: Endpoint<TwitchAPI> = Endpoint<TwitchAPI>(URL: url(target), sampleResponseClosure: {.NetworkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters)
+    
+    if let accessToken = NSUserDefaults.standardUserDefaults().objectForKey("TwitchAccessToken") {
+        
+        switch target {
+        case .FollowedStreams, .FollowedVideos, .User:
+            endpoint = endpoint.endpointByAddingHTTPHeaderFields(["Authorization": "OAuth \(accessToken as! String)"])
+        default:
+            break
+        }
+    }
+    
+    return endpoint
 }
 
 extension TwitchAPI : TargetType {
     var path: String {
         switch self {
-        case .TopGames:
+        case .TopGames(_,_):
             return "/games/top"
-        case .GameStreams(_):
+        case .GameStreams(_,_,_):
             return "/streams"
-        case .Streams:
+        case .Streams(_,_):
             return "/streams"
         case .Stream(let stream):
             return "/streams/\(stream)"
@@ -35,10 +57,14 @@ extension TwitchAPI : TargetType {
             return "/channels/\(channel)"
         case .FeaturedStreams:
             return "/streams/featured"
-        case .FollowedStreams:
-            return "/streams/followed"
         case .TopVideos:
             return "/videos/top"
+        case .User:
+            return "/user"
+        case .FollowedStreams:
+            return "/streams/followed"
+        case .FollowedVideos:
+            return "/videos/followed"
         }
     }
     
@@ -47,14 +73,18 @@ extension TwitchAPI : TargetType {
     
     var parameters: [String: AnyObject]? {
         switch self {
-        case .GameStreams(let game):
-            return ["game": game]
+        case .TopGames(let limit, let offset):
+            return ["limit": limit, "offset": offset]
+        case .Streams(let limit, let offset):
+            return ["limit": limit, "offset": offset]
+        case .GameStreams(let game, let limit, let offset):
+            return ["game": game, "limit": limit, "offset": offset]
         default:
             return nil
         }
     }
     
-    var method: ReactiveMoya.Method {
+    var method: Moya.Method {
         switch self {
         default:
             return .GET

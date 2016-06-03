@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="GamesCollectionViewController" customModule="Twitch" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="U4o-Vg-HHZ" id="SXR-c9-HeT"/>
+                <outlet property="scrollView" destination="9II-kz-Fpy" id="Inw-qc-auH"/>
+                <outlet property="view" destination="c22-O7-iKe" id="pac-vq-YLn"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9II-kz-Fpy">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+                    <clipView key="contentView" id="dxf-tT-u3r">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView selectable="YES" id="U4o-Vg-HHZ">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="Th3-VF-2AB">
+                                    <size key="itemSize" width="214" height="319"/>
+                                    <edgeInsets key="sectionInset" left="10" right="10" top="10" bottom="0.0"/>
+                                </collectionViewFlowLayout>
+                                <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="-2" id="h6P-mz-RyQ"/>
+                                    <outlet property="delegate" destination="-2" id="bIg-OA-n4p"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="v96-Nc-bNV">
+                        <rect key="frame" x="1" y="144" width="233" height="15"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="0M9-Ih-Fdb">
+                        <rect key="frame" x="234" y="1" width="15" height="143"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="9II-kz-Fpy" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="1im-at-eWM"/>
+                <constraint firstAttribute="trailing" secondItem="9II-kz-Fpy" secondAttribute="trailing" id="Vk5-Jk-y3q"/>
+                <constraint firstAttribute="bottom" secondItem="9II-kz-Fpy" secondAttribute="bottom" id="txz-cE-u9M"/>
+                <constraint firstItem="9II-kz-Fpy" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="y9p-UO-f6Y"/>
+            </constraints>
+        </customView>
+    </objects>
+</document>

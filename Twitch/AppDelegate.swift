@@ -11,8 +11,12 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+    let windowController = TwitchWindowController(windowNibName: "TwitchWindow")
+    
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         self.registerApplication()
+        
+        self.windowController.showWindow(self)
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -20,8 +24,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func registerApplication() {
-//        [[NSAppleEventManager sharedAppleEventManager] setEventHandler:self andSelector:@selector(getUrl:withReplyEvent:) forEventClass:kInternetEventClass andEventID:kAEGetURL];
-        
         NSAppleEventManager.sharedAppleEventManager().setEventHandler(self, andSelector: #selector(AppDelegate.handleEvent(_:withReplyEvent:)), forEventClass: AEEventClass(kInternetEventClass), andEventID: AEEventID(kAEGetURL))
     }
     
@@ -36,7 +38,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let last_index = query!.rangeOfString("&scope")?.startIndex;
             let accessToken = query!.substringWithRange(Range(first_index!..<last_index!));
             
-            let notification = NSNotification(name: "TwitchDidAuthenticate", object: accessToken)
+            NSUserDefaults.standardUserDefaults().setObject(accessToken, forKey: "TwitchAccessToken")
+            
+            let notification = NSNotification(name: Twitch.DidAuthenticate, object: accessToken)
             NSNotificationCenter.defaultCenter().postNotification(notification)
         }
     }
