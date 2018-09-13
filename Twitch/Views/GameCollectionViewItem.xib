@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView wantsLayer="YES" id="Ha3-aL-91B" userLabel="GameCollectionViewItem">
+            <rect key="frame" x="0.0" y="0.0" width="214" height="319"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cuu-kx-UZV">
+                    <rect key="frame" x="5" y="29" width="204" height="285"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="190" id="22b-mS-MkZ"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="285" id="JQw-YX-gkf"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="204" id="Q14-ht-Z7E"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="136" id="W7g-H9-sOV"/>
+                        <constraint firstAttribute="width" secondItem="cuu-kx-UZV" secondAttribute="height" multiplier="68:95" id="eow-xc-C7y"/>
+                    </constraints>
+                    <shadow key="shadow" blurRadius="3">
+                        <size key="offset" width="0.0" height="-3"/>
+                        <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.64735704790000004" colorSpace="calibratedRGB"/>
+                    </shadow>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="box-default" id="Tgv-fB-1a2"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JhT-0j-Fhg">
+                    <rect key="frame" x="183" y="10" width="28" height="11"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="justified" title="Label" id="9ly-3Z-6bh">
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" red="0.22352941179999999" green="0.22352941179999999" blue="0.22352941179999999" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4st-mZ-cDM">
+                    <rect key="frame" x="13" y="92" width="188" height="17"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="oGK-dB-xjZ">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rFy-3u-haW">
+                    <rect key="frame" x="3" y="10" width="28" height="11"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Label" id="wtf-fN-tgM">
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" red="0.22352941179999999" green="0.22352941179999999" blue="0.22352941179999999" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="4st-mZ-cDM" firstAttribute="trailing" secondItem="cuu-kx-UZV" secondAttribute="trailing" constant="-10" id="BtB-PC-Ctr"/>
+                <constraint firstAttribute="trailing" secondItem="cuu-kx-UZV" secondAttribute="trailing" constant="5" id="EV7-JX-uQk"/>
+                <constraint firstItem="4st-mZ-cDM" firstAttribute="leading" secondItem="cuu-kx-UZV" secondAttribute="leading" constant="10" id="EcS-v0-2Vd"/>
+                <constraint firstItem="rFy-3u-haW" firstAttribute="top" secondItem="cuu-kx-UZV" secondAttribute="bottom" constant="8" id="FBf-I2-XYK"/>
+                <constraint firstItem="cuu-kx-UZV" firstAttribute="leading" secondItem="rFy-3u-haW" secondAttribute="leading" id="Poy-4P-6Iz"/>
+                <constraint firstItem="JhT-0j-Fhg" firstAttribute="trailing" secondItem="cuu-kx-UZV" secondAttribute="trailing" id="Z5I-Gt-AFT"/>
+                <constraint firstItem="4st-mZ-cDM" firstAttribute="top" secondItem="cuu-kx-UZV" secondAttribute="bottom" constant="-80" id="c0l-Pw-EWf"/>
+                <constraint firstItem="JhT-0j-Fhg" firstAttribute="top" secondItem="cuu-kx-UZV" secondAttribute="bottom" constant="8" id="fsH-OO-5yc"/>
+                <constraint firstItem="cuu-kx-UZV" firstAttribute="top" secondItem="Ha3-aL-91B" secondAttribute="top" constant="5" id="iKc-FH-0bb"/>
+                <constraint firstItem="cuu-kx-UZV" firstAttribute="leading" secondItem="Ha3-aL-91B" secondAttribute="leading" constant="5" id="jB8-Qh-rEN"/>
+            </constraints>
+            <point key="canvasLocation" x="677" y="349.5"/>
+        </customView>
+        <collectionViewItem identifier="GameCollectionViewItem" id="T4T-g7-n6p" customClass="GameCollectionViewItem" customModule="Twitch" customModuleProvider="target">
+            <connections>
+                <outlet property="gameNameLabel" destination="4st-mZ-cDM" id="4Dy-hP-DyW"/>
+                <outlet property="imageView" destination="cuu-kx-UZV" id="KQH-5A-jNF"/>
+                <outlet property="streamsLabel" destination="JhT-0j-Fhg" id="512-0c-lUQ"/>
+                <outlet property="view" destination="Ha3-aL-91B" id="5mX-Dt-yFP"/>
+                <outlet property="viewersLabel" destination="rFy-3u-haW" id="2c4-iQ-Iji"/>
+            </connections>
+        </collectionViewItem>
+    </objects>
+    <resources>
+        <image name="box-default" width="272" height="380"/>
+    </resources>
+</document>

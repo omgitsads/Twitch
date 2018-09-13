@@ -1,0 +1,3 @@
+github "apollostack/apollo-ios"
+github "thomaschristensen/Pantomime" "master"
+github "SwiftScream/URITemplate" ~> 2.0

@@ -8,11 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		8C720E022141094C009177C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C720E012141094C009177C8 /* AppDelegate.swift */; };
-		8C720E042141094C009177C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C720E032141094C009177C8 /* ViewController.swift */; };
+		8C720E042141094C009177C8 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C720E032141094C009177C8 /* GamesViewController.swift */; };
 		8C720E062141094D009177C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C720E052141094D009177C8 /* Assets.xcassets */; };
 		8C720E092141094D009177C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C720E072141094D009177C8 /* Main.storyboard */; };
 		8C720E152141094D009177C8 /* TwitchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C720E142141094D009177C8 /* TwitchTests.swift */; };
 		8C720E202141094D009177C8 /* TwitchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C720E1F2141094D009177C8 /* TwitchUITests.swift */; };
+		8C720E5221413476009177C8 /* Apollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C720E5121413476009177C8 /* Apollo.framework */; };
+		8C720E5321413476009177C8 /* Apollo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C720E5121413476009177C8 /* Apollo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C720E5521413492009177C8 /* Pantomime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C720E5421413492009177C8 /* Pantomime.framework */; };
+		8C720E5621413492009177C8 /* Pantomime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C720E5421413492009177C8 /* Pantomime.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C720E59214134AC009177C8 /* Apollo.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C720E57214134AC009177C8 /* Apollo.framework.dSYM */; };
+		8C720E5A214134AC009177C8 /* Pantomime.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C720E58214134AC009177C8 /* Pantomime.framework.dSYM */; };
+		8C720E5D2141362C009177C8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C720E5C2141362B009177C8 /* API.swift */; };
+		8C924FF1214655F2004E0A93 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C924FF0214655F2004E0A93 /* GameViewModel.swift */; };
+		8C924FF42147CAEC004E0A93 /* TwitchWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C924FF32147CAEC004E0A93 /* TwitchWindowController.swift */; };
+		8C924FF721485409004E0A93 /* TwitchSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C924FF621485409004E0A93 /* TwitchSplitView.swift */; };
+		8C924FFA214856C5004E0A93 /* MDPSplitView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C924FF8214856BE004E0A93 /* MDPSplitView.framework */; };
+		8C924FFB214856C5004E0A93 /* MDPSplitView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C924FF8214856BE004E0A93 /* MDPSplitView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C924FFE214ABCDB004E0A93 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C924FFD214ABCDB004E0A93 /* MenuViewController.swift */; };
+		8C925000214AF0E5004E0A93 /* TwitchSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C924FFF214AF0E5004E0A93 /* TwitchSplitViewController.swift */; };
+		8C9C9533214143CE0078E689 /* Games.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 8C9C9532214143CD0078E689 /* Games.graphql */; };
+		8CF969E9214AFB08002D1DA0 /* URITemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF969E8214AFB08002D1DA0 /* URITemplate.framework */; };
+		8CF969EB214B00A8002D1DA0 /* GameCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CF969EA214B00A8002D1DA0 /* GameCollectionViewItem.xib */; };
+		8CF969EF214B0140002D1DA0 /* GameCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF969EE214B0140002D1DA0 /* GameCollectionViewItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,10 +50,37 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8C720E3F214111CF009177C8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8C720E5321413476009177C8 /* Apollo.framework in Embed Frameworks */,
+				8C924FFB214856C5004E0A93 /* MDPSplitView.framework in Embed Frameworks */,
+				8C720E5621413492009177C8 /* Pantomime.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C720E4021411211009177C8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				8C720E59214134AC009177C8 /* Apollo.framework.dSYM in CopyFiles */,
+				8C720E5A214134AC009177C8 /* Pantomime.framework.dSYM in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8C720DFE2141094C009177C8 /* Twitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C720E012141094C009177C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8C720E032141094C009177C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8C720E032141094C009177C8 /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		8C720E052141094D009177C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C720E082141094D009177C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C720E0A2141094D009177C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +91,21 @@
 		8C720E1B2141094D009177C8 /* TwitchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C720E1F2141094D009177C8 /* TwitchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchUITests.swift; sourceTree = "<group>"; };
 		8C720E212141094D009177C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C720E5121413476009177C8 /* Apollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Apollo.framework; path = Carthage/Build/Mac/Apollo.framework; sourceTree = "<group>"; };
+		8C720E5421413492009177C8 /* Pantomime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pantomime.framework; path = Carthage/Build/Mac/Pantomime.framework; sourceTree = "<group>"; };
+		8C720E57214134AC009177C8 /* Apollo.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Apollo.framework.dSYM; path = Carthage/Build/Mac/Apollo.framework.dSYM; sourceTree = "<group>"; };
+		8C720E58214134AC009177C8 /* Pantomime.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Pantomime.framework.dSYM; path = Carthage/Build/Mac/Pantomime.framework.dSYM; sourceTree = "<group>"; };
+		8C720E5C2141362B009177C8 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		8C924FF0214655F2004E0A93 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameViewModel.swift; path = "../New Group/GameViewModel.swift"; sourceTree = "<group>"; };
+		8C924FF32147CAEC004E0A93 /* TwitchWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchWindowController.swift; sourceTree = "<group>"; };
+		8C924FF621485409004E0A93 /* TwitchSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchSplitView.swift; sourceTree = "<group>"; };
+		8C924FF8214856BE004E0A93 /* MDPSplitView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MDPSplitView.framework; sourceTree = "<group>"; };
+		8C924FFD214ABCDB004E0A93 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		8C924FFF214AF0E5004E0A93 /* TwitchSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchSplitViewController.swift; sourceTree = "<group>"; };
+		8C9C9532214143CD0078E689 /* Games.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Games.graphql; sourceTree = "<group>"; };
+		8CF969E8214AFB08002D1DA0 /* URITemplate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = URITemplate.framework; path = Carthage/Build/Mac/Static/URITemplate.framework; sourceTree = "<group>"; };
+		8CF969EA214B00A8002D1DA0 /* GameCollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCollectionViewItem.xib; sourceTree = "<group>"; };
+		8CF969EE214B0140002D1DA0 /* GameCollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +113,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C720E5221413476009177C8 /* Apollo.framework in Frameworks */,
+				8CF969E9214AFB08002D1DA0 /* URITemplate.framework in Frameworks */,
+				8C924FFA214856C5004E0A93 /* MDPSplitView.framework in Frameworks */,
+				8C720E5521413492009177C8 /* Pantomime.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +140,13 @@
 		8C720DF52141094C009177C8 = {
 			isa = PBXGroup;
 			children = (
+				8C720E57214134AC009177C8 /* Apollo.framework.dSYM */,
+				8C720E58214134AC009177C8 /* Pantomime.framework.dSYM */,
+				8CF969E8214AFB08002D1DA0 /* URITemplate.framework */,
+				8C924FF8214856BE004E0A93 /* MDPSplitView.framework */,
+				8C720E5421413492009177C8 /* Pantomime.framework */,
+				8C720E5121413476009177C8 /* Apollo.framework */,
+				8C720E502141128C009177C8 /* Debugging Symbols */,
 				8C720E002141094C009177C8 /* Twitch */,
 				8C720E132141094D009177C8 /* TwitchTests */,
 				8C720E1E2141094D009177C8 /* TwitchUITests */,
@@ -96,8 +167,14 @@
 		8C720E002141094C009177C8 /* Twitch */ = {
 			isa = PBXGroup;
 			children = (
+				8CF969ED214B00C6002D1DA0 /* Views */,
+				8CF969EC214B00B7002D1DA0 /* ViewModels */,
+				8C924FFC214ABCCF004E0A93 /* Controllers */,
+				8C924FF5214853A4004E0A93 /* Subclasses */,
+				8C924FF22147CACE004E0A93 /* Windows */,
+				8C924FEF2145AAB5004E0A93 /* GraphQL */,
+				8C720E5C2141362B009177C8 /* API.swift */,
 				8C720E012141094C009177C8 /* AppDelegate.swift */,
-				8C720E032141094C009177C8 /* ViewController.swift */,
 				8C720E052141094D009177C8 /* Assets.xcassets */,
 				8C720E072141094D009177C8 /* Main.storyboard */,
 				8C720E0A2141094D009177C8 /* Info.plist */,
@@ -124,6 +201,64 @@
 			path = TwitchUITests;
 			sourceTree = "<group>";
 		};
+		8C720E502141128C009177C8 /* Debugging Symbols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Debugging Symbols";
+			sourceTree = "<group>";
+		};
+		8C924FEF2145AAB5004E0A93 /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				8C9C9532214143CD0078E689 /* Games.graphql */,
+			);
+			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		8C924FF22147CACE004E0A93 /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				8C924FF32147CAEC004E0A93 /* TwitchWindowController.swift */,
+			);
+			path = Windows;
+			sourceTree = "<group>";
+		};
+		8C924FF5214853A4004E0A93 /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				8C924FF621485409004E0A93 /* TwitchSplitView.swift */,
+			);
+			path = Subclasses;
+			sourceTree = "<group>";
+		};
+		8C924FFC214ABCCF004E0A93 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8C924FFD214ABCDB004E0A93 /* MenuViewController.swift */,
+				8C924FFF214AF0E5004E0A93 /* TwitchSplitViewController.swift */,
+				8C720E032141094C009177C8 /* GamesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8CF969EC214B00B7002D1DA0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8C924FF0214655F2004E0A93 /* GameViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8CF969ED214B00C6002D1DA0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8CF969EA214B00A8002D1DA0 /* GameCollectionViewItem.xib */,
+				8CF969EE214B0140002D1DA0 /* GameCollectionViewItem.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,9 +266,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C720E242141094D009177C8 /* Build configuration list for PBXNativeTarget "Twitch" */;
 			buildPhases = (
+				8C720E5B214135BE009177C8 /* Generate Apollo GraphQL API */,
 				8C720DFA2141094C009177C8 /* Sources */,
 				8C720DFB2141094C009177C8 /* Frameworks */,
 				8C720DFC2141094C009177C8 /* Resources */,
+				8C720E3F214111CF009177C8 /* Embed Frameworks */,
+				8C720E4021411211009177C8 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -192,6 +330,11 @@
 				TargetAttributes = {
 					8C720DFD2141094C009177C8 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 					8C720E0F2141094D009177C8 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -228,8 +371,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C9C9533214143CE0078E689 /* Games.graphql in Resources */,
 				8C720E062141094D009177C8 /* Assets.xcassets in Resources */,
 				8C720E092141094D009177C8 /* Main.storyboard in Resources */,
+				8CF969EB214B00A8002D1DA0 /* GameCollectionViewItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,12 +394,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8C720E5B214135BE009177C8 /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/Versions/Current/Resources/check-and-run-apollo-cli.sh codegen:generate --queries=\"$(find . -name '*.graphql')\" --schema=schema.json API.swift";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8C720DFA2141094C009177C8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C720E042141094C009177C8 /* ViewController.swift in Sources */,
+				8C925000214AF0E5004E0A93 /* TwitchSplitViewController.swift in Sources */,
+				8C924FF1214655F2004E0A93 /* GameViewModel.swift in Sources */,
+				8C924FFE214ABCDB004E0A93 /* MenuViewController.swift in Sources */,
+				8C720E042141094C009177C8 /* GamesViewController.swift in Sources */,
+				8C924FF721485409004E0A93 /* TwitchSplitView.swift in Sources */,
+				8C924FF42147CAEC004E0A93 /* TwitchWindowController.swift in Sources */,
+				8C720E5D2141362C009177C8 /* API.swift in Sources */,
+				8CF969EF214B0140002D1DA0 /* GameCollectionViewItem.swift in Sources */,
 				8C720E022141094C009177C8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,10 +588,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Twitch/Twitch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = U3Q5XYG4QA;
+				DEVELOPMENT_TEAM = HD29S69MGL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac/Static",
+				);
 				INFOPLIST_FILE = Twitch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -438,10 +612,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Twitch/Twitch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = U3Q5XYG4QA;
+				DEVELOPMENT_TEAM = HD29S69MGL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac/Static",
+				);
 				INFOPLIST_FILE = Twitch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

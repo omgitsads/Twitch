@@ -1,0 +1,28 @@
+query FetchGame($name: String) {
+  game(name: $name) {
+    ...GameDetails
+  }
+}
+
+query FetchGames {
+  games {
+    edges {
+      cursor
+      node {
+        ...GameDetails
+      }
+    }
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+  }
+}
+
+fragment GameDetails on Game {
+  id
+  displayName
+  coverURL
+  viewersCount
+  broadcastersCount
+}
